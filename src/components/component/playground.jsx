@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 
 const PomodoroTimer = () => {
-    const [timer, setTimer] = useState(25 * 60);
-    const [isActive, setIsActive] = useState(false);
-    const [isWork, setIsWork] = useState(true);
-    const [workTime, setWorkTime] = useState(25);
-    const [breakTime, setBreakTime] = useState(5);
-    const [sessions, setSessions] = useState(0);
+    const [timer, setTimer] = useState(25 * 60); // Timer in seconds
+    const [isActive, setIsActive] = useState(false); // Timer is active or not
+    const [isWork, setIsWork] = useState(true); // Work or break time
+    const [workTime, setWorkTime] = useState(25); // Work time in minutes
+    const [breakTime, setBreakTime] = useState(5); // Break time in minutes
+    const [sessions, setSessions] = useState(0); // Number of sessions
 
     useEffect(() => {
         let interval = null;
@@ -83,11 +83,11 @@ const PomodoroTimer = () => {
                     <div className="flex flex-col items-center">
                         <div className="text-sm font-semibold text-gray-600 mb-1">Work Time</div>
                         <div className="flex items-center">
-                            <Button onClick={() => adjustTime(true, -1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost">
+                            <Button onClick={() => adjustTime(true, -1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             <span className="mx-2 text-lg font-semibold">{workTime}</span>
-                            <Button onClick={() => adjustTime(true, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost">
+                            <Button onClick={() => adjustTime(true, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronUp className="w-4 h-4" />
                             </Button>
                         </div>
@@ -96,11 +96,13 @@ const PomodoroTimer = () => {
                         <div className="text-sm font-semibold text-gray-600 mb-1">Break Time</div>
                         <div className="flex items-center">
                             <Button onClick={() => adjustTime(false, -1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700"
-                                variant="ghost">
+                                variant="ghost"
+                                disabled={isActive}
+                            >
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             <span className="mx-2 text-lg font-semibold">{breakTime}</span>
-                            <Button onClick={() => adjustTime(false, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost">
+                            <Button onClick={() => adjustTime(false, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronUp className="w-4 h-4" />
                             </Button>
                         </div>
