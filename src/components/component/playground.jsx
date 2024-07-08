@@ -83,11 +83,11 @@ const PomodoroTimer = () => {
                     <div className="flex flex-col items-center">
                         <div className="text-sm font-semibold text-gray-600 mb-1">Work Time</div>
                         <div className="flex items-center">
-                            <Button onClick={() => adjustTime(true, -1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
+                            <Button onClick={() => { adjustTime(true, -1); setIsWork(true); }} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             <span className="mx-2 text-lg font-semibold">{workTime}</span>
-                            <Button onClick={() => adjustTime(true, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
+                            <Button onClick={() => { adjustTime(true, 1); setIsWork(true); }} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronUp className="w-4 h-4" />
                             </Button>
                         </div>
@@ -95,14 +95,14 @@ const PomodoroTimer = () => {
                     <div className="flex flex-col items-center">
                         <div className="text-sm font-semibold text-gray-600 mb-1">Break Time</div>
                         <div className="flex items-center">
-                            <Button onClick={() => adjustTime(false, -1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700"
+                            <Button onClick={() => { adjustTime(false, -1); setIsWork(false); }} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700"
                                 variant="ghost"
                                 disabled={isActive}
                             >
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             <span className="mx-2 text-lg font-semibold">{breakTime}</span>
-                            <Button onClick={() => adjustTime(false, 1)} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
+                            <Button onClick={() => { adjustTime(false, 1); setIsWork(false); }} className="p-1 bg-gray-200 hover:bg-gray-300 text-gray-700" variant="ghost" disabled={isActive}>
                                 <ChevronUp className="w-4 h-4" />
                             </Button>
                         </div>
