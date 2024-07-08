@@ -1,8 +1,8 @@
-# CalcWhiz (React + Vite)
+# Pomodoro Pro (React + Vite)
 
 ## Introduction
 
-This is a basic Calculator that allows for 4 basic operations (Addition, Subtraction, Multiplication and Division). It is made using Tailwind CSS and React.
+This is a basic Pomodoro timer app. It allows for setting up custom time for the timer. Moreover, you can switch between the two timers (work and break). It also records the number of work sessions.
 
 ## UI Library
 
@@ -13,9 +13,10 @@ Radix UI and ShadCN components were used to create the UI of the website. Moreov
 This project was deployed to Github Pages and can be tested there. No servers or databases were used in this Project.
 
 ## Preview
-![Screenshot 2024-06-03 190119](https://github.com/HasanYahya101/CalcWhiz-Vite/assets/118683092/96d6d571-6c63-46ae-bade-c5fdb51d5631)
-![Screenshot 2024-06-03 190613](https://github.com/HasanYahya101/CalcWhiz-Vite/assets/118683092/e28dbb0a-7109-4408-b841-b89d6a426bc5)
-![Screenshot 2024-06-03 190622](https://github.com/HasanYahya101/CalcWhiz-Vite/assets/118683092/807d9f92-a6ad-4d1b-bf84-b20c593ca598)
+![Screenshot 2024-07-09 041420](https://github.com/HasanYahya101/PomodoroPro-Vite/assets/118683092/5fe0c582-d6f5-4686-a1a0-82a05e215cc9)
+![Screenshot 2024-07-09 041432](https://github.com/HasanYahya101/PomodoroPro-Vite/assets/118683092/0124513f-62ee-41fc-9f6a-153760911c2c)
+![Screenshot 2024-07-09 041445](https://github.com/HasanYahya101/PomodoroPro-Vite/assets/118683092/2c2a4ba7-9a48-465e-9a7d-91f5c1e301f0)
+
 
 ## React + Vite
 
