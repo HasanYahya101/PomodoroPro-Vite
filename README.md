@@ -1,5 +1,6 @@
 # Pomodoro Pro (React + Vite)
 
+
 ## Introduction
 
 This is a basic Pomodoro timer app. It allows for setting up custom time for the timer. Moreover, you can switch between the two timers (work and break). It also records the number of work sessions.
